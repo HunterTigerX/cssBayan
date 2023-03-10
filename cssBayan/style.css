@@ -1,0 +1,180 @@
+html {
+    background-color: rgb(198, 221, 164);
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.form-wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 4rem;
+    color: black;
+}
+
+.lines,
+.paragraphs {
+    margin-bottom: 0.5rem;
+}
+
+.bayan-blocks:hover label div div {
+    color: black;
+}
+
+.bayan-blocks:hover label div .indicator {
+    display: flex;
+}
+
+input:checked {
+    color: black;
+}
+
+input[type="radio"] {
+    opacity: 0;
+    width: 0;
+}
+
+.text-block {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.paragraphs {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: blue;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+label:active .label-wrapper .paragraphs {
+    color: blue;
+}
+
+.label-wrapper .paragraphs {
+    color: blue;
+}
+
+input[type="radio"]:checked+label .paragraphs {
+    color: rgb(0, 0, 0);
+}
+
+.indicator {
+    background-image: url("./images/plus.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 3rem;
+    height: 3rem;
+    transition: transform 0.5s ease-in-out;
+    display: none;
+}
+
+input[type="radio"]:checked+label .label-wrapper .paragraphs .indicator {
+    transform: rotateY(0deg) rotate(45deg);
+}
+
+label:hover .label-wrapper .paragraphs .indicator {
+    transform: rotateY(0deg) rotate(45deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+.images-size {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    transition: all 1s ease;
+    opacity: 0;
+    width: 0;
+}
+
+label:hover .images-size {
+    opacity: 1;
+    width: 50%;
+}
+
+input[type="radio"]:checked+label .label-wrapper .images-size {
+    width: 50%;
+    opacity: 1;
+}
+
+
+
+@media screen and (max-width: 1919px) and (min-width: 820px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .paragraphs {
+        font-size: 2rem;
+    }
+
+    label:hover .images-size {
+        width: 40%;
+    }
+
+    .indicator {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+@media screen and (max-width: 819px) and (min-width: 321px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .paragraphs {
+        font-size: 1.5rem;
+    }
+
+    label:hover .images-size {
+        width: 30%;
+    }
+
+    .indicator {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .paragraphs {
+        font-size: 1rem;
+    }
+
+    label:hover .images-size {
+        width: 20%;
+    }
+
+    .indicator {
+        width: 1rem;
+        height: 1rem;
+    }
+}
+
+@media (hover: hover) {
+    h1,
+    .lines,
+    .paragraphs, 
+    .label-wrapper,
+    .form-wrapper:hover {
+        cursor: pointer;
+    }
+
+    .images-size:active {
+        cursor: grabbing;
+    }
+}
