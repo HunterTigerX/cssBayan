@@ -1,0 +1,112 @@
+html {
+    background-color: rgb(198, 221, 164);
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+h1,
+.line-one,
+.bayan-blocks {
+    width: 80%;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+h1 {
+    color: black;
+}
+
+.lines,
+.paragraphs {
+    margin-bottom: 0.5rem;
+}
+
+.bayan-blocks:hover label div div {
+    color: black;
+}
+
+.bayan-blocks:hover label div .indicator {
+    display: flex;
+}
+
+input:checked {
+    color: black;
+}
+
+input[type="radio"] {
+    opacity: 0;
+    width: 0;
+}
+
+.text-block {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.paragraphs {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: blue;
+}
+
+label:active .label-wrapper .paragraphs {
+    color: blue;
+}
+
+label:hover {
+    cursor: pointer;
+}
+
+input[type="radio"]:checked+label .paragraphs {
+    color: rgb(0, 0, 0);
+}
+
+.indicator {
+    background-image: url("./images/plus.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 3vw;
+    height: 3vw;
+    transition: transform 0.5s ease-in-out;
+    display: none;
+}
+
+input[type="radio"]:checked+label .label-wrapper .paragraphs .indicator {
+    transform: rotateY(0deg) rotate(45deg);
+}
+
+label:hover .label-wrapper .paragraphs .indicator {
+    transform: rotateY(0deg) rotate(45deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+.images-size {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    transition: all 1s ease;
+    opacity: 0;
+    width: 0;
+}
+
+label:hover .images-size {
+    opacity: 1;
+    width: 50%;
+}
+
+.images-size:active {
+    cursor: grabbing;
+}
+
+input[type="radio"]:checked+label .label-wrapper .images-size {
+    width: 50%;
+    opacity: 1;
+}
+
