@@ -59,6 +59,10 @@ label:active .label-wrapper .paragraphs {
     color: blue;
 }
 
+.label-wrapper .paragraphs {
+    color: blue;
+}
+
 input[type="radio"]:checked+label .paragraphs {
     color: rgb(0, 0, 0);
 }
