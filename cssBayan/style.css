@@ -7,15 +7,13 @@ html {
     margin: 0 auto;
 }
 
-h1,
-.line-one,
-.bayan-blocks {
+.form-wrapper {
     width: 80%;
-    font-weight: bold;
     margin: 0 auto;
 }
 
 h1 {
+    font-size: 4rem;
     color: black;
 }
 
@@ -53,14 +51,12 @@ input[type="radio"] {
     flex-direction: row;
     justify-content: space-between;
     color: blue;
+    font-size: 3rem;
+    font-weight: bold;
 }
 
 label:active .label-wrapper .paragraphs {
     color: blue;
-}
-
-label:hover {
-    cursor: pointer;
 }
 
 input[type="radio"]:checked+label .paragraphs {
@@ -72,8 +68,8 @@ input[type="radio"]:checked+label .paragraphs {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    width: 3vw;
-    height: 3vw;
+    width: 3rem;
+    height: 3rem;
     transition: transform 0.5s ease-in-out;
     display: none;
 }
@@ -101,11 +97,80 @@ label:hover .images-size {
     width: 50%;
 }
 
-.images-size:active {
-    cursor: grabbing;
-}
-
 input[type="radio"]:checked+label .label-wrapper .images-size {
     width: 50%;
     opacity: 1;
+}
+
+
+
+@media screen and (max-width: 1919px) and (min-width: 820px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .paragraphs {
+        font-size: 2rem;
+    }
+
+    label:hover .images-size {
+        width: 40%;
+    }
+
+    .indicator {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+@media screen and (max-width: 819px) and (min-width: 321px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .paragraphs {
+        font-size: 1.5rem;
+    }
+
+    label:hover .images-size {
+        width: 30%;
+    }
+
+    .indicator {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .paragraphs {
+        font-size: 1rem;
+    }
+
+    label:hover .images-size {
+        width: 20%;
+    }
+
+    .indicator {
+        width: 1rem;
+        height: 1rem;
+    }
+}
+
+@media (hover: hover) {
+    h1,
+    .lines,
+    .paragraphs, 
+    .label-wrapper,
+    .form-wrapper:hover {
+        cursor: pointer;
+    }
+
+    .images-size:active {
+        cursor: grabbing;
+    }
 }
